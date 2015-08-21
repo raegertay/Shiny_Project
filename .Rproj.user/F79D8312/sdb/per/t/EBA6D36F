@@ -1,0 +1,18 @@
+{
+    "contents" : "library(shiny)\nshinyUI(fluidPage(\n        titlePanel(\"BMI Calculator\"),\n        \n        tabsetPanel(\n                tabPanel(\"Documentation\", \n                         mainPanel(\n                                 h3(\"Introduction\"),\n                                 p(\"The body mass index (BMI), or Quetelet index, \n                                is a value derived from the mass (weight) and height of an individual. \n                                 The BMI is an attempt to quantify the amount of tissue mass (muscle, fat, and bone) \n                                in an individual, and then categorize that person as underweight, normal weight, overweight, \n                                or obese based on that value.\"\n                                 ),\n                                 h3(\"Instructions\"),\n                                 p(\"1. Select the 'BMI Calculator' tab.\"),\n                                 p(\"2. Enter your height(cm) and weight(kg).\"),\n                                 p(\"3. Press 'Calculate'\"),\n                                 p(\"4. Compare your BMI against the table in the sidebar.\"),\n                                 em(\"App created for Coursera's Developing Data Products course, Aug 2015.\")\n                         )\n                ),\n                \n                tabPanel(\"BMI Calculator\", \n                         sidebarPanel(\n                                 numericInput('iheight', 'Height in cm', 150, min = 1, max = 999, step = 1),\n                                 numericInput('iweight', 'Weight in kg', 50, min = 1, max = 999, step = 1),\n                                 submitButton('Calculate'),\n                                 br(),\n                                 tableOutput('table')\n                         ),\n                         mainPanel(\n                                 h3(\"Your Inputs\"),\n                                 h4(\"Height:\"),\n                                 verbatimTextOutput(\"oheight\"),\n                                 h4(\"Weight:\"),\n                                 verbatimTextOutput(\"oweight\"),\n                                 h3(\"Your BMI\"),\n                                 verbatimTextOutput(\"bmi\")\n                         )\n                )\n        )\n)\n)\n",
+    "created" : 1440123745968.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "968775988",
+    "id" : "EBA6D36F",
+    "lastKnownWriteTime" : 1440142602,
+    "path" : "D:/Dropbox/Data Science Specialisation/09_Developing Data Products/Course_Projects/Shiny_Project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

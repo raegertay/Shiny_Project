@@ -1,0 +1,8 @@
+name: BMI_Calculator
+account: raeger
+server: shinyapps.io
+bundleId: 246065
+url: https://raeger.shinyapps.io/BMI_Calculator
+when: 1440143179.05427
+asMultiple: FALSE
+asStatic: FALSE

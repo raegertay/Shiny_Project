@@ -1,0 +1,18 @@
+{
+    "contents" : "library(shiny)\n\nbmi <- function(height, weight) {if (height>0 && weight>0) round(weight/(height/100)^2, 1)\n                                 else \"Please check your inputs.\"}\nprintPositive <- function(x) {if (x <= 0) \"Please enter a positive number.\"\n                              else x}\nbmiTable <- data.frame(Category=c(\"Underweight\",\"Normal weight\",\"Overweight\",\"Obseity\"), \n                       BMI=c(\"18.4 or lesser\",\"18.5-24.9\",\"25-29.9\",\"30 or greater\"))\n\nshinyServer(\n        function(input, output){\n                output$oheight <- renderPrint({printPositive(input$iheight)})\n                output$oweight <- renderPrint({printPositive(input$iweight)})\n                output$bmi <- renderPrint({bmi(input$iheight, input$iweight)})\n                output$table <- renderTable(bmiTable,include.rownames=FALSE)\n        }\n)",
+    "created" : 1440123767533.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1671044272",
+    "id" : "11764277",
+    "lastKnownWriteTime" : 1440132263,
+    "path" : "D:/Dropbox/Data Science Specialisation/09_Developing Data Products/Course_Projects/Shiny_Project/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
